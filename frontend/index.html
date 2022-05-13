@@ -1,0 +1,41 @@
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>I Literally Just Told You!</title>
+    </head>
+
+    <body>
+        <div class="container w-50 p-3 mt-2" style="background-color: aqua; border: solid 3px #000; text-align: center;" id="gameTitle">
+            <h1 class="display-4">I Literally Just Told You!</h1>
+        </div>
+        <div class="container w-50 p-3" style="background-color: aquamarine; border: solid 3px #000; text-align: center;" id="initScreen">
+            <button type="button" class="btn btn-info" style="background-color: #34f9b7; border: solid 3px #000; color: #000; border-radius: 0;" onclick="setupNewGame()">Create New Game</button>
+            <button type="button" class="btn btn-primary" style="background-color: #34f9b7; border: solid 3px #000; color: #000; border-radius: 0;" onclick="joinExistingGame()">Join Game</button>
+        </div>
+        <div class="container w-50 p-3" style="background-color: #fff5c3; border: solid 3px #000; text-align: center;" id="startNewGameContainer">
+            <div class="row">
+                <input type="text" style="width: 30%; color: #000; border: solid 3px #000; border-radius: 0;" class="form-control mt-2 ml-2" id="playerNameStart" placeholder="Enter Your Name">
+                <button type="button" style="background-color: #f8e16f; border: solid 3px #000; border-radius: 0; color: #000;" class="btn btn-success mt-2 ml-2" onclick="startNewGame()">Start Game</button>
+                <p class="m-3 lead"><b id="gameCode">Psdfasdfp</b> is your game code.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="lead" id="nullNameError" style="color: red;">Please enter a name.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container w-50 p-3" style="background-color: #ff7260; border: solid 3px #000; text-align: center;" id="joinGameContainer">
+            <div class="row">
+                <input type="text" style="width: 30%; color: #000; border: solid 3px #000; border-radius: 0;" class="form-control mt-2 ml-2" id="playerNameJoin" placeholder="Enter Your Name">
+                <input type="text" style="width: 30%; color: #000; border: solid 3px #000; border-radius: 0;" class="form-control mt-2 ml-2" id="existingGameCode" placeholder="Enter Game Code">
+                <button type="button" style="background-color: #f6422a; border: solid 3px #000; border-radius: 0; color: #000;" class="btn btn-success mt-2 ml-2" onclick="joinGame()">Join Game</button>
+            </div>
+        </div>
+
+        <div class="container w-50 p-3 mt-2" style="background-color: aqua; border: solid 3px #000; text-align: center;" id="lobbyContainer">
+        </div>
+    </body> 
+    <script src="index.js"></script>
+</html>
